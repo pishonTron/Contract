@@ -742,7 +742,7 @@ contract Pispool is IRewardDistributionRecipient {
     
     event PisSwapToUsdt(address user, uint256 amount, uint256 usdtchange);
     event DaoPowerBonus(address user, uint256 amount);
-    event Top49CommPowerBonus(address user, uint256 amount);
+    event Top49CommPowerBonus(address user, uint256 amount, uint256 compower);
     event Top200PowerBonus(address user, uint256 amount, uint256 superpower );
 
     constructor( uint256 _starttime ) public {
@@ -882,7 +882,7 @@ contract Pispool is IRewardDistributionRecipient {
 
                 if (bonus >0) {
                     pis.mint(currentAddress,bonus);
-                    emit Top49CommPowerBonus(currentAddress, bonus);
+                    emit Top49CommPowerBonus(currentAddress, bonus, one);
 
                 }
         }
