@@ -578,9 +578,9 @@ contract IRewardDistributionRecipient is Ownable {
 
 
 pragma solidity 0.5.8;
-import "Console.sol";
+//import "Console.sol";
 
-contract Pispool is IRewardDistributionRecipient, Console{
+contract Pispool is IRewardDistributionRecipient {
     using SafeMath for uint256;
 
     uint256 private totalUsers;
@@ -620,7 +620,7 @@ contract Pispool is IRewardDistributionRecipient, Console{
     }
 
 
-    uint256 constant public INVEST_MIN_AMOUNT =  10000000;//100*1000000 ;//100 usdt
+    uint256 constant public INVEST_MIN_AMOUNT =  100000000;//100*1000000 ;//100 usdt
     uint256 constant public REFER_MIN_AMOUNT =  10000;  //10000;//1000000*0.01 ;//
     uint256 constant public COMM_MIN_AMOUNT =  3000000000;    //3000000000
 
